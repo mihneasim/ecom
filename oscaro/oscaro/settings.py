@@ -58,7 +58,7 @@ INSTALLED_APPS = (
     'oscaro',
     'south',
     'compressor'
-) + get_core_apps()
+) + tuple(get_core_apps())
 
 SITE_ID = 1
 
@@ -78,7 +78,7 @@ ROOT_URLCONF = 'oscaro.urls'
 WSGI_APPLICATION = 'oscaro.wsgi.application'
 
 AUTHENTICATION_BACKENDS = (
-    'oscar.apps.customer.auth_backends.EmailBackend',
+    'oscar.apps.customer.auth_backends.Emailbackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -121,5 +121,9 @@ TEMPLATE_DIRS = (
     #location('templates'),
     OSCAR_MAIN_TEMPLATE_DIR,
 )
+try:
+    from oscaro.local_settings import *
+except ImportError:
+    pass
 
 from oscar.defaults import *
