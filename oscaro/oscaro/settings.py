@@ -99,6 +99,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'ro_RO'
+LANGUAGES = (('ro', 'Romanian'), )
 
 TIME_ZONE = 'UTC'
 
