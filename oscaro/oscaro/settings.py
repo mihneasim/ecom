@@ -67,6 +67,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'oscaro.middleware.ClearHTTPAcceptLanguage',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'oscar.apps.basket.middleware.BasketMiddleware',
@@ -125,9 +126,11 @@ TEMPLATE_DIRS = (
     #location('templates'),
     OSCAR_MAIN_TEMPLATE_DIR,
 )
+
+from oscar.defaults import *
+
 try:
     from oscaro.local_settings import *
 except ImportError:
     pass
 
-from oscar.defaults import *

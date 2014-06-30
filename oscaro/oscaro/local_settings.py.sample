@@ -6,6 +6,11 @@ OSCAR_ORDER_STATUS_PIPELINE = {
     'Cancelled': (),
 }
 
+OSCAR_SHOP_NAME = 'Oscaro'
+OSCAR_SHOP_TAGLINE = ''
+OSCAR_FROM_EMAIL = 'oscaro@example.com'
+OSCAR_DEFAULT_CURRENCY = 'RON'
+
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
