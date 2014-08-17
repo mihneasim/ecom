@@ -119,8 +119,8 @@ LOCALE_PATHS = (
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, '..', '..', 'var', 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, '..', '..', 'var', 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, '..', 'var', 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'var', 'media')
 
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 TEMPLATE_DIRS = (
